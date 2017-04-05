@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="model.GeoLiteCity" table="cities">
+      <meta attribute="class-description">
+         GeoLiteCity class mapping to actor table 
+      </meta>
+      <id name="locationID" type="integer" column="locationID">
+         <generator class="native"/>
+      </id>
+      <property name="metroCode" 	column="metroCode" 	type="integer"/>
+      <property name="areaCode" 	column="areaCode" 	type="integer"/>
+      <property name="country" 		column="country" 	type="string"/>
+      <property name="region" 		column="region" 	type="string"/>
+      <property name="city" 		column="city" 		type="string"/>
+      <property name="postalCode" 	column="postalCode" type="string"/>
+      <property name="longitude" 	column="longitude" 	type="double"/>
+      <property name="latitude" 	column="latitude" 	type="double"/>
+   </class>
+</hibernate-mapping>
